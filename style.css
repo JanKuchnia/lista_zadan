@@ -1,0 +1,383 @@
+/* Ogólne style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kontenery */
+.kontener {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.kontener-logowania, .kontener-rejestracji {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Nagłówki */
+.naglowek, .naglowek-logowania, .naglowek-rejestracji {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.naglowek h1, .naglowek-logowania h1, .naglowek-rejestracji h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.naglowek-logowania p, .naglowek-rejestracji p {
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+/* Statystyki */
+.statystyki {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.statystyka {
+    text-align: center;
+}
+
+.liczba-statystyka {
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+}
+
+/* Formularze */
+.formularz-dodawania, .formularz-logowania, .formularz-rejestracji {
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.grupa-input, .grupa-pola {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.pole-zadania, .pole-formularza, .pole-edycji {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.pole-zadania:focus, .pole-formularza:focus, .pole-edycji:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.etykieta-pola {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Przyciski */
+.przycisk {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.przycisk-glowny {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.przycisk-glowny:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.przycisk-niebezpieczny {
+    background: #e74c3c;
+    color: white;
+}
+
+.przycisk-niebezpieczny:hover {
+    background: #c0392b;
+}
+
+.przycisk-drugorzedny {
+    background: #95a5a6;
+    color: white;
+}
+
+.przycisk-drugorzedny:hover {
+    background: #7f8c8d;
+}
+
+.przycisk-maly {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* Zadania */
+.sekcja-zadan {
+    padding: 30px;
+}
+
+.naglowek-zadan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.element-zadania {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.element-zadania:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.element-zadania.ukonczone {
+    opacity: 0.7;
+    border-left-color: #2ecc71;
+}
+
+.checkbox-zadania {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.tekst-zadania {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.tekst-zadania.ukonczone {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.akcje-zadania {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.meta-zadania {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.formularz-edycji {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    margin-right: 15px;
+}
+
+.pusty-stan {
+    text-align: center;
+    padding: 60px 20px;
+    color: #7f8c8d;
+}
+
+.ikona-pustego-stanu {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+/* Komunikaty */
+.komunikat {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.komunikat-sukces {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.komunikat-blad {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.lista-bledow {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Strona główna showcase */
+.showcase-header {
+    background: #0078d4;
+    color: white;
+    padding: 20px 0;
+}
+
+.showcase-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.showcase-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.showcase-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.showcase-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.showcase-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.showcase-hero {
+    background: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.showcase-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.showcase-hero p {
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.showcase-cta {
+    display: inline-block;
+    background: white;
+    color: #0078d4;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.showcase-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.showcase-features {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.showcase-feature {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.showcase-feature:hover {
+    transform: translateY(-10px);
+}
+
+.showcase-feature-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #0078d4;
+}
+
+.showcase-feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.showcase-footer {
+    background: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .grupa-input, .akcje-zadania, .statystyki {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .showcase-menu {
+        display: none;
+    }
+    
+    .showcase-hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .showcase-hero p {
+        font-size: 1.2em;
+    }
+}
